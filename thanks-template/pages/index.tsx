@@ -2,8 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Typewriter from 'typewriter-effect';
+
+
 
 export default function Home() {
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +18,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Thank You !</h1>
+        <h2 className={styles.title}>
+          <Typewriter options={{
+            strings: ['Thank You for this amazing opportunity'],
+            autoStart: true,
+            loop:true
+          }}/>
+        </h2>
+      
 
         <Link href={`/projects`}>
           <a>Go to Projects</a>
