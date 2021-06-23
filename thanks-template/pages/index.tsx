@@ -36,18 +36,24 @@ export default function Home() {
 
         <div className={styles.asideContent}>
           <h2 className={styles.title}>
-            <Typewriter
+            {/* <Typewriter
               options={{
                 strings: ["Thank You for this amazing opportunity"],
 
                 autoStart: true,
+
                 // loop: true,
+              }}
+            /> */}
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString("Thanks for this opportunity!").start();
               }}
             />
           </h2>
 
           <p className={styles.asideContentDescrip}>
-            Thanks for allowing me a wonderfull chance to work along, but...{" "}
+            Thank you for offering me a wonderfull chance to work along but...{" "}
             <br />I am a First Year Student and I am not looking out this
             commitment as of now!
           </p>
