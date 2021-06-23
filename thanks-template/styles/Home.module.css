@@ -1,20 +1,115 @@
-.container {
+.parentContainer {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: 100%;
+  background-color: #1fadff;
+  background-image: linear-gradient(
+    160deg,
+    #1fadff 12%,
+    #4007a1 56%,
+    #1b1c5b 81%,
+    #061a36 100%
+  );
+
+  color: white;
+}
+
+.titleSm {
+  font-size: medium;
+}
+
+.titleMd {
+  font-size: large;
+}
+
+.titleLg {
+  font-size: larger;
+}
+
+.titleXl {
+  font-size: 2rem;
+}
+
+.title2Xl {
+  font-size: 2.5rem;
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.asideContent {
+  width: 70%;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+.asideAvatar {
+  width: 30%;
+  display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+  background-color: rgba(255, 255, 255, 0.04);
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-right: 1px solid #ffffff45;
+  padding: 1rem;
+}
+
+.avatarDescrip {
+  background-color: rgba(255, 255, 255, 0.199);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.asideContentDescrip {
+  font-size: 1.5rem;
+  width: 80%;
+  margin: 1rem;
+}
+
+.typewriter {
+  position: relative;
+  top: 7em;
+  width: fit-content;
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(100, end), blink-caret 0.75s step-end infinite;
+  color: black;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 .footer {
