@@ -1,10 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-export type Query = {
-  query: string;
-};
-
 export type Blog = {
   title: string;
   slug: string;
@@ -12,8 +8,12 @@ export type Blog = {
   _id: string;
 };
 
+export type BlogArray = {
+  data: Blog[];
+};
+
 export async function getStaticProps() {
-  async function gql(query: any, variables = {}) {
+  async function gql(query: string, variables = {}) {
     const data = await fetch("https://api.hashnode.com/", {
       method: "POST",
       headers: {
@@ -53,7 +53,7 @@ export async function getStaticProps() {
   };
 }
 
-const Blogs = ({ data }: any) => {
+const Blogs = ({ data }: BlogArray) => {
   console.log(data);
 
   return (

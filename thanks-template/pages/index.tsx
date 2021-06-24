@@ -36,15 +36,6 @@ export default function Home() {
 
         <div className={styles.asideContent}>
           <h2 className={styles.title}>
-            {/* <Typewriter
-              options={{
-                strings: ["Thank You for this amazing opportunity"],
-
-                autoStart: true,
-
-                // loop: true,
-              }}
-            /> */}
             <Typewriter
               onInit={(typewriter) => {
                 typewriter.typeString("Thanks for this opportunity!").start();
@@ -57,6 +48,8 @@ export default function Home() {
             <br />I am a First Year Student and I am not looking out this
             commitment as of now!
           </p>
+
+          <p></p>
 
           <Link href={`/projects`}>
             <a>Go to Projects</a>
