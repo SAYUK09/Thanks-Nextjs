@@ -5,6 +5,8 @@ import Link from "next/link";
 import Typewriter from "typewriter-effect";
 import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
 import { Flex, Spacer, Center } from "@chakra-ui/react";
+import { FcDown } from "react-icons/fc";
+import { FaArrowDown } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -43,21 +45,30 @@ export default function Home() {
             />
           </h2>
 
-          <p className={styles.asideContentDescrip}>
+          <p className={styles.code}>
             Thank you for offering me a wonderfull chance to work along but...{" "}
             <br />I am a First Year Student and I am not looking out this
             commitment as of now!
           </p>
 
-          <p></p>
+          <p className={styles.asideContentDescrip}>
+            I am consistently working on my skillset, checkout my hardwork here
+            <span style={{ color: "white" }}> ↓ </span>
+          </p>
 
-          <Link href={`/projects`}>
-            <a>Go to Projects</a>
-          </Link>
+          <div className={styles.navigateBtnsDiv}>
+            <button className={styles.navigateBtn}>
+              <Link href={`/projects`}>
+                <a>Go to Projects</a>
+              </Link>
+            </button>
 
-          <Link href={`/blogs`}>
-            <a>Go to Blogs</a>
-          </Link>
+            <button className={styles.navigateBtn}>
+              <Link href={`/blogs`}>
+                <a>Go to Blogs</a>
+              </Link>
+            </button>
+          </div>
         </div>
       </main>
 
