@@ -5,15 +5,14 @@ export type Query = {
   query: string;
 };
 
-const Blogs = () => {
-  const [articles, setArticles] = useState([]);
-  type Blog = {
-    title: string;
-    slug: string;
-    brief: string;
-    _id: string;
-  };
+export type Blog = {
+  title: string;
+  slug: string;
+  brief: string;
+  _id: string;
+};
 
+export async function getStaticProps() {
   async function gql(query: any, variables = {}) {
     const data = await fetch("https://api.hashnode.com/", {
       method: "POST",
@@ -44,14 +43,18 @@ const Blogs = () => {
             }
         `;
 
-  useEffect(() => {
-    gql(GET_ARTICLES, { page: 0 }).then((result) => {
-      console.log(result.data.user.publication.posts);
-      setArticles(result.data.user.publication.posts);
-    });
-  }, []);
+  const data = await gql(GET_ARTICLES, { page: 0 }).then((result) => {
+    console.log(result.data.user.publication.posts);
+    return result.data.user.publication.posts;
+  });
 
+  return {
+    props: { data },
+  };
+}
 
+const Blogs = ({ data }: any) => {
+  console.log(data);
 
   return (
     <div>
@@ -60,8 +63,8 @@ const Blogs = () => {
         <a>Back to Home</a>
       </Link>
 
-      {articles &&
-        articles.map((post: Blog) => {
+      {data &&
+        data.map((post: Blog) => {
           return <h1 key={post._id}>{post.title}</h1>;
         })}
     </div>
