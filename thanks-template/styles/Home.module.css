@@ -63,7 +63,7 @@
   background-color: rgba(255, 255, 255, 0.04);
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  border-right: 1px solid #ffffff45;
+  border-right: 2px solid #ffffff45;
   padding: 1rem;
 }
 
@@ -179,7 +179,7 @@
   background: #fafafa;
   border-radius: 5px;
   padding: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: black;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;

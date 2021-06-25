@@ -46,9 +46,13 @@ export default function Home() {
           </h2>
 
           <p className={styles.code}>
-            Thank you for offering me a wonderfull chance to work along but...{" "}
+            Thanks for reaching out! The role you mentioned certainly sounds
+            like an interesting job, and I appreciate your consideration.
             <br />I am a First Year Student and I am not looking out this
-            commitment as of now!
+            commitment as of now. <br />
+            That said, if I find myself looking to make a change in the future,
+            I’ll be sure to get in touch <br />I would love to stay connected
+            Thanks again!
           </p>
 
           <p className={styles.asideContentDescrip}>
