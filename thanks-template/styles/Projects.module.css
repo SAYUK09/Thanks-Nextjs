@@ -1,0 +1,43 @@
+.projectsParent {
+  background-color: #1fadff;
+  background-image: linear-gradient(
+    160deg,
+    #1fadff 12%,
+    #4007a1 56%,
+    #1b1c5b 81%,
+    #061a36 100%
+  );
+  min-height: 100vh;
+  color: white;
+}
+
+.headerBackground {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerImage {
+  height: 100px;
+}
+
+.titleSm {
+  font-size: medium;
+}
+
+.titleMd {
+  font-size: large;
+}
+
+.titleLg {
+  font-size: larger;
+}
+
+.titleXl {
+  font-size: 2rem;
+}
+
+.title2Xl {
+  font-size: 2.5rem;
+}

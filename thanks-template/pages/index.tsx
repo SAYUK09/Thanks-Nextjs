@@ -56,12 +56,14 @@ export default function Home() {
           </p>
 
           <p className={styles.asideContentDescrip}>
-            I am consistently working on my skillset, checkout my hardwork here
-            <span style={{ color: "white" }}> ↓ </span>
+            I am consistently working on my skillset, checkout my hardwork{" "}
+            <a target="new" href="https://neo-sayuk-portfolio.netlify.app/">
+              <span className={styles.link}> here </span>
+            </a>
           </p>
 
           <div className={styles.navigateBtnsDiv}>
-            <button className={styles.navigateBtn}>
+            {/* <button className={styles.navigateBtn}>
               <Link href={`/projects`}>
                 <a>Go to Projects</a>
               </Link>
@@ -71,22 +73,14 @@ export default function Home() {
               <Link href={`/blogs`}>
                 <a>Go to Blogs</a>
               </Link>
-            </button>
+            </button> */}
           </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        Made with{" "}
+        <span style={{ color: "yellow", marginLeft: "2.2px" }}> gratitude</span>{" "}
       </footer>
     </div>
   );

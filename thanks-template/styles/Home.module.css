@@ -103,6 +103,15 @@
   flex-direction: column;
 }
 
+.link {
+  color: white;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: black;
+}
+
 .navigateBtn {
   padding: 0.5rem;
   background-color: #2d3436;
@@ -137,6 +146,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .footer a {
